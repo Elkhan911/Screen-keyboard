@@ -30,3 +30,8 @@ deleteSymbBtn.addEventListener("click", function () {
 ClearBtn.addEventListener("click", function () {
   textarea1.value = "";
 });
+
+capsLockBtn.addEventListener("click", function () {
+  let str = String(textarea1.value);
+  textarea1.value = str.toUpperCase();
+});
