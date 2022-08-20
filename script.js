@@ -27,4 +27,6 @@ deleteSymbBtn.addEventListener("click", function () {
   textarea1.value = str.slice(0, -1);
 });
 
-ClearBtn.addEventListener("click");
+ClearBtn.addEventListener("click", function () {
+  textarea1.value = "";
+});
