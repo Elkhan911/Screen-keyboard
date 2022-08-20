@@ -8,6 +8,103 @@
     <title>Экранная клавиатура на JavaScript</title>
   </head>
   <body>
+    <section class="task">
+      <h2 class="task__description">
+        Давайте реализуем экранную клавиатуру. На ней должны быть кнопочки со
+        всеми буквами и цифрами клавиатуры компьютера. Кликая мышкой по этим
+        кнопочкам мы сможем вводить данные, например, при неработающей
+        клавиатуре.
+
+        <p>
+          Реализуйте описанную клавиатуру. Пусть эта клавиатура будет привязана
+          к какому-нибудь инпуту, то есть кликая по ней, мы будем вводить данные
+          в этот инпут.
+        </p>
+        <p>
+          Сделайте на вашей клавиатуре кнопку Caps Lock, которая будет делать
+          так, чтобы все буквы переводились в верхний регистр.
+        </p>
+      </h2>
+
+      <div class="task__keys">
+        <button class="buttons">1</button>
+        <button class="buttons">2</button>
+        <button class="buttons">3</button>
+        <button class="buttons">4</button>
+        <button class="buttons">5</button>
+        <button class="buttons">6</button>
+        <button class="buttons">7</button>
+        <button class="buttons">8</button>
+        <button class="buttons">9</button>
+        <button class="buttons">0</button>
+      </div>
+
+      <div class="task__keys">
+        <button class="buttons">й</button>
+        <button class="buttons">ц</button>
+        <button class="buttons">у</button>
+        <button class="buttons">к</button>
+        <button class="buttons">е</button>
+        <button class="buttons">н</button>
+        <button class="buttons">г</button>
+        <button class="buttons">ш</button>
+        <button class="buttons">щ</button>
+        <button class="buttons">з</button>
+        <button class="buttons">х</button>
+        <button class="buttons">ъ</button>
+      </div>
+
+      <div class="task__keys">
+        <button class="buttons">ф</button>
+        <button class="buttons">ы</button>
+        <button class="buttons">в</button>
+        <button class="buttons">а</button>
+        <button class="buttons">п</button>
+        <button class="buttons">р</button>
+        <button class="buttons">о</button>
+        <button class="buttons">л</button>
+        <button class="buttons">д</button>
+        <button class="buttons">ж</button>
+        <button class="buttons">э</button>
+      </div>
+
+      <div class="task__keys">
+        <button class="buttons">я</button>
+        <button class="buttons">ч</button>
+        <button class="buttons">с</button>
+        <button class="buttons">м</button>
+        <button class="buttons">и</button>
+        <button class="buttons">т</button>
+        <button class="buttons">ь</button>
+        <button class="buttons">б</button>
+        <button class="buttons">ю</button>
+        <button class="buttons">,</button>
+        <button class="buttons">.</button>
+      </div>
+
+      <div class="task__keys task__keys-extra">
+        <input type="button" name="" id="spaceButton" value="Пробел" />
+        <input type="button" name="" id="enterButton" value="Enter" />
+        <input type="button" name="" id="capsLockButton" value="Caps Lock" />
+        <input type="button" name="" id="deleteSymbol" value="Delete" />
+        <input type="button" name="" id="clearAll" value="Clear" />
+      </div>
+
+      <div class="task__keys">
+        <textarea
+          class="task__textarea"
+          name=""
+          id="_textarea1"
+          cols="30"
+          rows="10"
+          placeholder="введите значение..."
+        ></textarea>
+
+        <div class="task__asnwer-zone">
+          <p class="task__answer">Ваш текст: <span id="span1"></span></p>
+        </div>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
