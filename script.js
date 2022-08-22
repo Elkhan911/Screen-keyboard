@@ -8,9 +8,14 @@ const capsLockBtn = document.querySelector("#capsLockButton");
 const deleteSymbBtn = document.querySelector("#deleteSymbol");
 const ClearBtn = document.querySelector("#clearAll");
 
+let isCapsLockOn = false;
+
 for (let button of buttons) {
   button.addEventListener("click", function () {
-    textarea1.value += button.textContent;
+    console.log("Button click");
+    textarea1.value += isCapsLockOn
+      ? button.textContent.toUpperCase()
+      : button.textContent.toLowerCase();
   });
 }
 
@@ -31,8 +36,6 @@ ClearBtn.addEventListener("click", function () {
   textarea1.value = "";
 });
 
-let isCapsLockOn = false;
-
 capsLockBtn.addEventListener("click", function () {
   if (isCapsLockOn == true) {
     isCapsLockOn = false;
@@ -42,10 +45,4 @@ capsLockBtn.addEventListener("click", function () {
     capsLockBtn.classList.add("capsLockOn");
   }
   console.log(isCapsLockOn);
-});
-
-textarea1.addEventListener("keydown", function (event) {
-  let str = textarea1.value;
-  str.toUpperCase();
-  console.log(event.key);
 });
