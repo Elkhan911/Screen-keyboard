@@ -99,3 +99,8 @@ body {
   border-bottom: 2px solid blue;
   margin: 3px;
 }
+
+.capsLockOn {
+  border: 1px sold red;
+  color: aqua;
+}

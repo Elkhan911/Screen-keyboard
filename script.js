@@ -31,7 +31,18 @@ ClearBtn.addEventListener("click", function () {
   textarea1.value = "";
 });
 
+let isCapsLockOn = false;
+
 capsLockBtn.addEventListener("click", function () {
-  let str = String(textarea1.value);
-  textarea1.value = str.toUpperCase();
+  console.log(isCapsLockOn);
+  if (isCapsLockOn == false) {
+    isCapsLockOn == true;
+    capsLockBtn.classList.add("capsLockOn");
+  } else {
+    if (isCapsLockOn == true) {
+      isCapsLockOn == false;
+      capsLockBtn.classList.remove("capsLockOn");
+    }
+    console.log(isCapsLockOn);
+  }
 });
