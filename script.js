@@ -35,14 +35,12 @@ let isCapsLockOn = false;
 
 capsLockBtn.addEventListener("click", function () {
   console.log(isCapsLockOn);
-  if (isCapsLockOn == false) {
-    isCapsLockOn == true;
-    capsLockBtn.classList.add("capsLockOn");
+  if (isCapsLockOn == true) {
+    isCapsLockOn = false;
+    capsLockBtn.classList.remove("capsLockOn");
   } else {
-    if (isCapsLockOn == true) {
-      isCapsLockOn == false;
-      capsLockBtn.classList.remove("capsLockOn");
-    }
-    console.log(isCapsLockOn);
+    isCapsLockOn = true;
+    capsLockBtn.classList.add("capsLockOn");
   }
+  console.log(isCapsLockOn);
 });
