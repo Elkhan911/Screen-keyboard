@@ -34,7 +34,6 @@ ClearBtn.addEventListener("click", function () {
 let isCapsLockOn = false;
 
 capsLockBtn.addEventListener("click", function () {
-  console.log(isCapsLockOn);
   if (isCapsLockOn == true) {
     isCapsLockOn = false;
     capsLockBtn.classList.remove("capsLockOn");
@@ -43,4 +42,10 @@ capsLockBtn.addEventListener("click", function () {
     capsLockBtn.classList.add("capsLockOn");
   }
   console.log(isCapsLockOn);
+});
+
+textarea1.addEventListener("keydown", function (event) {
+  let str = textarea1.value;
+  str.toUpperCase();
+  console.log(event.key);
 });
