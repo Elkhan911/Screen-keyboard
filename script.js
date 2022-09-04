@@ -1,21 +1,22 @@
-const buttons = document.querySelectorAll(".buttons");
+const buttons = document.querySelectorAll(".keyboard__button");
 const textarea1 = document.querySelector("#_textarea1");
-const span1 = document.querySelector("#span1");
-
-const spaceBtn = document.querySelector("#spaceButton");
-const enterBtn = document.querySelector("#enterButton");
-const capsLockBtn = document.querySelector("#capsLockButton");
-const deleteSymbBtn = document.querySelector("#deleteSymbol");
-const ClearBtn = document.querySelector("#clearAll");
+const spaceBtn = document.querySelector("#_spaceButton");
+const enterBtn = document.querySelector("#_enterButton");
+const capsLockBtn = document.querySelector("#_capsLockButton");
+const deleteSymbBtn = document.querySelector("#_deleteSymbol");
+const clearBtn = document.querySelector("#_clearAll");
 
 let isCapsLockOn = false;
 
 for (let button of buttons) {
   button.addEventListener("click", function () {
-    console.log("Button click");
-    textarea1.value += isCapsLockOn
-      ? button.textContent.toUpperCase()
-      : button.textContent.toLowerCase();
+    // textarea1.value += isCapsLockOn
+    //   ? button.textContent.toUpperCase()
+    //   : button.textContent.toLowerCase();
+
+    if (isCapsLockOn == true) {
+      textarea1.value += button.textContent.toUpperCase();
+    } else textarea1.value += button.textContent.toLowerCase();
   });
 }
 
@@ -32,7 +33,7 @@ deleteSymbBtn.addEventListener("click", function () {
   textarea1.value = str.slice(0, -1);
 });
 
-ClearBtn.addEventListener("click", function () {
+clearBtn.addEventListener("click", function () {
   textarea1.value = "";
 });
 
@@ -44,5 +45,4 @@ capsLockBtn.addEventListener("click", function () {
     isCapsLockOn = true;
     capsLockBtn.classList.add("capsLockOn");
   }
-  console.log(isCapsLockOn);
 });
