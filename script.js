@@ -10,10 +10,6 @@ let isCapsLockOn = false;
 
 for (let button of buttons) {
   button.addEventListener("click", function () {
-    // textarea1.value += isCapsLockOn
-    //   ? button.textContent.toUpperCase()
-    //   : button.textContent.toLowerCase();
-
     if (isCapsLockOn == true) {
       textarea1.value += button.textContent.toUpperCase();
     } else textarea1.value += button.textContent.toLowerCase();
